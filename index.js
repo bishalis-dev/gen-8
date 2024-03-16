@@ -43,7 +43,10 @@ const generateSecretKey = (
             splitLength: 4
         }
     } = {},
-    writeToFile = false
+    writeToFile = {
+        writeToFile: true,
+        filename: '.env'
+    }
 ) => {
     // Generate random bytes
     const secretKey = crypto.randomBytes(length);
@@ -73,9 +76,12 @@ const generateSecretKey = (
     
     if (writeToFile) {
         // Write the key to a file
-        fs.appendFile('.env', `SECRETKEY=${key}\n`, (err) => {
-            if (err) throw err;
-        });
+        try {
+            fs.writeFileSync(writeToFile.filename, `SECRETKEY=${key}\n`);
+        }catch(err){
+            console.log(err);
+            return key;
+        }
     }
     return key;
 };
@@ -108,6 +114,9 @@ const randomInt = (min, max) => {
     const number = buffer.readUInt32BE(0);
     return Math.floor(number / 0x100000000 * (max - min + 1) + min + 1);
 };
+const key = generateSecretKey(32, { uppercase: true, lowercase: true, split: { split: true, separator: '-', splitLength: 4 }
+}, { writeToFile: true, filename: '.env' });
+console.log("Generated Secret Key:", key);
 module.exports = {
     OTP,
     generateSecretKey,
