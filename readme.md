@@ -65,6 +65,7 @@ console.log("Generated Password:", password);
 
 ```
 ## Documentation:
+### generateSecretKey
 `generateSecretKey(length: number, options: object, writeToFile: boolean) => string`
 
 Generates a secret key of the specified length.
@@ -78,7 +79,10 @@ Generates a secret key of the specified length.
         - `separator`: Separator for splitting the key.
         - `splitLength`: Length of each segment.
         - `writeToFile`: Boolean indicating whether to write the key to a file (`default: false`). In case of `true`, the key will be written to a file that you provide (`default: .env`) in the current directory.
+
+### generatePassword
 `generatePassword(length: number, options: object) => string`
+
 Generates a password of the specified length.
 
 `length`: Length of the password (`default: 12`).
@@ -87,7 +91,9 @@ Generates a password of the specified length.
 `alphabets`: Include alphabetic characters (`default: true`).
 `specialCharacters`: Include special characters (`default: true`).
 
+### OTP
 `OTP(length: number, options: object, caseOptions: object) => string`
+
 Generates a One-Time Password (OTP) of the specified length.
 
 `length`: Length of the OTP (`default: 6`).
@@ -99,6 +105,7 @@ Generates a One-Time Password (OTP) of the specified length.
 `uppercase`: Convert the OTP to uppercase (`default: false`).
 `lowercase`: Convert the OTP to lowercase (`default: false`).
 
+### randomInt
 `randomInt(min: number, max: number) => number`
 
 Generates a random integer between min (inclusive) and max (inclusive).
