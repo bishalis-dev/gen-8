@@ -1,12 +1,18 @@
 {
   "name": "generate-8",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Gen8 (generate-8) is an Open Source Nodejs Library for generating random data like sceret keys, passwords, OTP numbers, etc using cryptography.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["generate sceret key","generate passwords", "otp generator", "random data generator", "generate-8"],
+  "keywords": [
+    "generate sceret key",
+    "generate passwords",
+    "otp generator",
+    "random data generator",
+    "generate-8"
+  ],
   "author": "Bishal KC",
   "license": "ISC"
 }
