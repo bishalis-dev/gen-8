@@ -113,9 +113,6 @@ const randomInt = (min, max) => {
     const number = buffer.readUInt32BE(0);
     return Math.floor(number / 0x100000000 * (max - min + 1) + min + 1);
 };
-const key = generateSecretKey(32, { uppercase: true, lowercase: true, split: { split: true, separator: '-', splitLength: 4 }
-}, { writeToFile: true, filename: '.env' });
-console.log("Generated Secret Key:", key);
 module.exports = {
     OTP,
     generateSecretKey,
