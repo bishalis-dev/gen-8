@@ -1,2 +1,12 @@
-# Gen8 - Security at nuts (Under Development)
-Gen8 is an Open Source Nodejs Library for generating random data like sceret keys, passwords, OTP numbers, etc using cryptography. 
+# Gen8
+
+Gen8 is an open-source Node.js library for generating random data securely using cryptography. It provides functions for generating secret keys, passwords, OTP (One-Time Password) numbers, and more.
+
+## Installation
+
+You can install Gen8 via npm:
+
+```bash
+npm install gen8
+```
+

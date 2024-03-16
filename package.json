@@ -1,0 +1,13 @@
+{
+  "name": "Gen-8",
+  "version": "1.0.0",
+  "description": "Gen8 is an Open Source Nodejs Library for generating random data like sceret keys, passwords, OTP numbers, etc using cryptography.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
