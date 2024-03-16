@@ -1,6 +1,5 @@
-import crypto from 'crypto';
-import fs from 'fs';
-
+const fs = require('fs');
+const crypto = require('crypto');
 const OTP = (
     length = 6,
     {
